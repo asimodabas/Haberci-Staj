@@ -1,0 +1,116 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar class="ion-no-border">
+        <ion-buttons slot="end">
+            <ion-button color="dark" (click)='close()'>
+                <ion-icon name="close-circle-outline" size="large"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+
+</ion-header>
+<ion-content>
+    <div class="conteiner">
+        <div class="profile {{openClosePage[0]}}">
+            <div class="profile__img">
+                <img src="assets/icon/favicon.png">
+            </div>
+            <div class="profile__name">
+                <h4>Ayşe Yılmaz</h4>
+            </div>
+            <div class="profile__title">
+                Sosyal Media Uzmanı
+            </div>
+        </div>
+        <div class="profile_edit">
+            <!-- List of day -->
+            <ion-list class="list">
+                <ion-item class="list__item {{openClosePage[1]}}" (click)="openEditPage(1,'turnOnOff')">
+                    <ion-label>Kişisel Bilgiler</ion-label>
+
+                </ion-item>
+                <ion-item class="list__item {{openClosePage[2]}}" (click)="openEditPage(2,'turnOnOff')">
+                    <ion-label>Anahtar kelimeler</ion-label>
+
+                </ion-item>
+                <ion-item class="list__item {{openClosePage[3]}}" (click)="openEditPage(3,'turnOnOff')">
+                    <ion-label>Web siteleri</ion-label>
+                </ion-item>
+            </ion-list>
+        </div>
+        <!--Edid page-->
+        <div class="profile_edit {{closeEdit[1]}}">
+            <div class="profile__img">
+                <img src="assets/icon/favicon.png">
+                <ion-icon size="large" name="camera-reverse"></ion-icon>
+            </div>
+            <div class="profile__name">
+                <ion-input placeholder="Aysa"></ion-input>
+
+            </div>
+            <div class="profile__title">
+                <ion-input placeholder="Sosyal Media Uzmanı"></ion-input>
+
+            </div>
+            <div class="save_cencel_btn">
+
+                <ion-button color="dark" (click)="openEditPage(-1,'')" fill="outline">Iptal</ion-button>
+                <ion-button color="dark">Kaydet</ion-button>
+            </div>
+        </div>
+        <div class="{{closeEdit[2]}}">
+            <!--ADD KEY-->
+            <div class="add_key">
+
+                <ion-input placeholder="hangi kelime eklenecek?"></ion-input>
+                <div class="add__new_key">
+                    <h4>Ekle</h4>
+                </div>
+                <ion-icon size="large" name="close-circle-outline" (click)="openEditPage(-1,'')"></ion-icon>
+
+
+            </div>
+            <!--Key-->
+            <div class="key_flex">
+                <div class="key__word">
+                    <h4>kiras</h4>
+                </div>
+                <div class="key__word">
+                    <h4>Izmir Belediye</h4>
+                </div>
+                <div class="key__word" *ngFor="let item of [].constructor(2)">
+                    <h4>Izmir</h4>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="{{closeEdit[3]}}">
+            <!--ADD NEWS-->
+            <div class="add_key">
+
+                <ion-input placeholder="hangi site eklenecek?"></ion-input>
+                <div class="add__new_key">
+                    <h4>Ekle</h4>
+                </div>
+                <ion-icon size="large" name="close-circle-outline" (click)="openEditPage(-1,'')"></ion-icon>
+
+
+            </div>
+            <!--NEWS-->
+            <div class="key_flex">
+                <div class="key__word">
+                    <h4>kiras</h4>
+                </div>
+                <div class="key__word">
+                    <h4>Izmir Belediye</h4>
+                </div>
+                <div class="key__word" *ngFor="let item of [].constructor(2)">
+                    <h4>Izmir</h4>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</ion-content>

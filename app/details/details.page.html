@@ -1,0 +1,42 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar no-border>
+        <ion-buttons slot="start">
+            <ion-back-button color="dark">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </ion-back-button>
+        </ion-buttons>
+        <ion-title>9 Haziran 2021</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="conteiner">
+        <ion-list class="result_list">
+            <div class="result__items" *ngFor="let item of [].constructor(4)">
+                <div class="result__item" (click)="openWeb()">
+
+                    <div class="key_flex">
+                        <div class="key__word">
+                            <h4>kiras</h4>
+                        </div>
+                        <div class="key__word">
+                            <h4>Izmir Belediye</h4>
+                        </div>
+                    </div>
+
+                    <h4>Nisan ayinda kar yağmaz dediler Kar yağdırdılar </h4>
+                    <div class="result__conteiner">
+                        <label>Hurriyet.com.tr</label>
+
+                    </div>
+                </div>
+
+                <div class="forward_icon">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                </div>
+            </div>
+
+
+        </ion-list>
+    </div>
+</ion-content>

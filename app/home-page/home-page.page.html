@@ -1,0 +1,106 @@
+<ion-content>
+    <div class="conteiner">
+        <!--Header-->
+        <div class="header">
+            <img src="assets/icon/favicon.png" (click)="openProfile()">
+            <ion-icon name="notifications-outline" size="large"></ion-icon>
+        </div>
+        <div class="{{homePageOnOff}}">
+
+            <h2>Merhaba Ayşe hanım,</h2>
+            <h5>anahtar kelimelerinize ait haberler</h5>
+        </div>
+
+        <!--ADD KEY-->
+        <div class="add_key {{newKeyPageOnOff}}">
+
+            <ion-input [(ngModel)]="key_word" (ionChange)="searchOldKey(key_word)" placeholder="hangi kelime eklenecek?"></ion-input>
+            <div class="add__new_key" (press)="onPress($event)">
+                <h4>Ekle</h4>
+            </div>
+            <ion-icon (click)="turnOnOffNewKyePage(false)" size="large" name="close-circle-outline"></ion-icon>
+
+
+        </div>
+        <!--Key-->
+        <div class="key_flex">
+            <div class="key__word">
+                <h4>kiras</h4>
+            </div>
+            <div class="key__word">
+                <h4>Izmir Belediye</h4>
+            </div>
+            <div class="key__word" *ngFor="let item of [].constructor(2)">
+                <h4>Izmir</h4>
+            </div>
+            <div class="key__word key_add {{homePageOnOff}}" (click)="turnOnOffNewKyePage(true)">
+                <h4>+ Ekle</h4>
+            </div>
+        </div>
+
+        <div class="{{homePageOnOff}}">
+            <!--Search-->
+            <div class="search">
+                <ion-input [(ngModel)]="key_word" (ionChange)="turnOnOff(key_word)" placeholder="hangi kelimeyi aramıştınız?"></ion-input>
+            </div>
+
+            <!--Result-->
+            <div class="reslt_conteiner {{resultOnOff}}">
+                <div class="result__word">
+                    <h4><b>"Kiras Belediyesi"</b> kelimesine ait 4 sonuç bulundu</h4>
+                </div>
+                <div>
+                    <ion-list class="result_list">
+                        <div class="result__items" *ngFor="let item of [].constructor(4)">
+                            <div class="result__item">
+                                <h4>Nisan ayinda kar yağmaz dediler Kar yağdırdılar </h4>
+                                <div class="result__conteiner">
+                                    <label>Hurriyet.com.tr</label>
+                                    <label>9 Haziran 2021</label>
+                                </div>
+                            </div>
+
+                            <div class="forward_icon">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                            </div>
+                        </div>
+
+
+                    </ion-list>
+                </div>
+            </div>
+            <!-- List of day -->
+            <ion-list class="list {{listOnOff}}">
+                <ion-item class="list__item" (click)="openDetails()">
+                    <ion-label>Bugün</ion-label>
+                    <ion-badge style="background-color: #f65038;">3</ion-badge>
+                </ion-item>
+                <ion-item class="list__item" (click)="openDetails()">
+                    <ion-label>Dün</ion-label>
+                    <ion-badge color="dark">9</ion-badge>
+                </ion-item>
+                <ion-item class="list__item" (click)="openDetails()">
+                    <ion-label>6 Haziran 2021</ion-label>
+                    <ion-badge color="dark"></ion-badge>
+                </ion-item>
+                <ion-item class="list__item" (click)="openDetails()">
+                    <ion-label>5 Haziran 2021</ion-label>
+                    <ion-badge color="dark">5</ion-badge>
+                </ion-item>
+                <ion-item class="list__item" (click)="openDetails()">
+                    <ion-label>4 Haziran 2021</ion-label>
+                    <ion-badge color="dark">7</ion-badge>
+                </ion-item>
+                <ion-item class="list__item" (click)="openDetails()">
+                    <ion-label>3 Haziran 2021</ion-label>
+                    <ion-badge color="dark"></ion-badge>
+                </ion-item>
+                <ion-item class="list__item" (click)="openDetails()">
+                    <ion-label>2 Haziran 2021</ion-label>
+                    <ion-badge color="dark">9</ion-badge>
+                </ion-item>
+            </ion-list>
+        </div>
+
+    </div>
+</ion-content>

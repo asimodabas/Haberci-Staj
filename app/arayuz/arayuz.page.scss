@@ -1,0 +1,83 @@
+#container {
+    text-align: start;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+ion-toolbar{
+    --border-color:white;
+    --padding-top:15px;
+}
+
+ion-icon{
+    padding-right:25px;
+    padding-top: 5px;
+    font-size: 38px;
+}
+
+.profile{
+    height: 38px;
+    padding-left: 25px;
+    padding-top: 5px;
+}
+
+.merhaba{
+    padding-left: 30px;
+    font-size: 22px;
+    font-family: system-ui;
+}
+.merhaba2{
+    padding-left: 30px;
+    margin-top: -20px;
+    font-family: system-ui;
+    color: #9f9f9f;
+}
+
+ion-searchbar { 
+    --icon-color: #808080;
+    --background: white;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    border-radius: 10px;
+    --placeholder-color:#808080;
+    margin-left: 30px;
+    font-family: system-ui;
+    height: 45px;
+    min-height: 45px;
+    width: 300px;
+    min-width: 300px;
+    margin-top: 20px;
+}
+
+.button1{
+    --border-color:red;
+    border-radius: 15px;
+    border-color: red;
+    color: red;
+    padding-left: 30px;
+    margin-left: -15px;
+}
+.button2{
+    --border-color:red;
+    border-radius: 15px;
+    border-color: red;
+    color: white;
+    --background:red;
+    margin-left: 12px;
+}
+
+.ion-item{
+    --border-color: #f1efef;
+    --background: #f1efef;
+    color: #808080;
+    margin-left: 30px;
+    margin-right: 42px;
+    font-family: system-ui;
+    --border-radius: 10px;
+    margin-bottom: 5px;
+}

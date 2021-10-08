@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar >
+    <ion-icon (click)="bildirim" name="notifications-outline" slot="end"></ion-icon>
+    <img src="../assets/icon/favicon.png" slot="start" class="profile" (click)="profile" [routerLink]="[ '/profile']">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content scroll-y="true">
+<div style="margin-top: -15px;">
+  <p class="merhaba">Merhaba Ayşe hanım,</p>
+  <p class="merhaba2">anahtar kelimelerinize ait haberler</p>
+  <div style="padding-left: 30px;">
+    <ion-list class="ion-no-border">
+      <ion-button (click)="sil()" size="small" class="button2">Kiraz</ion-button>
+      <ion-button (click)="sil()" size="small" class="button2">İzmir</ion-button>
+      <ion-button (click)="sil()" size="small" class="button2">Ayşe Demir</ion-button>
+      <ion-button (click)="sil()" size="small" class="button2">İzmir Belediyesi</ion-button>
+      <ion-button (click)="ekle()" fill="outline" size="small" class="button1">+Ekle</ion-button>
+    </ion-list>
+  </div>
+  
+  <ion-searchbar placeholder="hangi kelimeyi aramıştınız?" [(ngModel)]="kelime" (ionChange)="onSearchChange($event)"></ion-searchbar>
+  <ion-list *ngIf="!kelime">
+    <ion-item class="ion-item" style="margin-bottom: 5px; margin-top: 15px; width: 300px;">
+      <ion-label>Bugün</ion-label>
+      <ion-badge color="danger" slot="end">3</ion-badge>
+    </ion-item>
+    <ion-item class="ion-item">
+      <ion-label>Dün</ion-label>
+      <ion-badge color="dark" slot="end">9</ion-badge>
+    </ion-item>
+    <ion-item class="ion-item">
+      <ion-label>06 Haziran 2021</ion-label>
+    </ion-item>
+    <ion-item class="ion-item">
+      <ion-label>05 Haziran 2021</ion-label>
+      <ion-badge color="dark" slot="end">7</ion-badge>
+    </ion-item>
+    <ion-item class="ion-item">
+      <ion-label>05 Haziran 2021</ion-label>
+      <ion-badge color="dark" slot="end">7</ion-badge>
+    </ion-item>
+    <ion-item class="ion-item">
+      <ion-label>05 Haziran 2021</ion-label>
+      <ion-badge color="danger" slot="end"></ion-badge>
+    </ion-item>
+    <ion-item class="ion-item">
+      <ion-label>05 Haziran 2021</ion-label>
+      <ion-badge color="danger" slot="end"></ion-badge>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngIf="kelime">
+    <ion-item style="margin-bottom: 5px; margin-top: 15px; width: 300px;">
+      <ion-label>Nisan ayında kar yağmaz dediler Kar yağdırdılar yağdı</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nisan ayında kar yağmaz dediler Kar yağdırdılar yağdı</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nisan ayında kar yağmaz dediler Kar yağdırdılar yağdı</ion-label>
+    </ion-item>
+  </ion-list>
+</div>
+
+</ion-content>

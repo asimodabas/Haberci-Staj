@@ -1,0 +1,23 @@
+<ion-content>
+  <div id="container">
+    <span class="haber">haber</span>
+    <span class="ci">ci</span>
+  </div>
+
+  <div id="container2" style="padding: 50px;">
+    <ion-input [(ngModel)]="username" placeholder="Ad Soyad" type="text" class="login"></ion-input>
+    <ion-input [(ngModel)]="email" placeholder="e-mail" type="e-mail" class="login"></ion-input>
+    <ion-input [(ngModel)]="password" placeholder="Password" type="password" class="login"></ion-input>
+  </div>
+
+<div id="container3">
+  <ion-button style="width: 265px;" color="dark" (click)="signIn()" [disabled]="!username || !email || !password">Kayıt Ol</ion-button>
+  <ion-button style="width: 265px;" color="light" [routerLink]="[ '/login']">Giriş</ion-button><br><br><br>
+  <ion-label (click)="unuttum" class="sifremiUnuttum" [routerLink]="[ '/unuttum']">Şifremi Unuttum?</ion-label>
+</div>
+
+<ion-button (click)="deneme" expand="block" fill="clear" shape="round" [routerLink]="[ '/arayuz']">
+  arayüze götürücü
+</ion-button>
+
+</ion-content>

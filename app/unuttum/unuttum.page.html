@@ -1,0 +1,16 @@
+<ion-content>
+  <div id="container">
+    <span class="haber">haber</span>
+    <span class="ci">ci</span>
+  </div>
+
+  <div id="container2" style="padding: 50px;">
+    <ion-input [(ngModel)]="email" placeholder="e-mail" type="e-mail" class="login"></ion-input>
+  </div>
+
+<div id="container3">
+  <ion-button style="width: 265px;" color="dark" [disabled]="!email">Gönder</ion-button>
+  <ion-button style="width: 265px;" color="light" [routerLink]="[ '/login']">Giriş</ion-button>
+</div>
+
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-content>
+  <div id="container">
+    <span class="haber">haber</span>
+    <span class="ci">ci</span>
+  </div>
+
+  <div id="container2" style="padding: 50px;">
+    <ion-input [(ngModel)]="email" placeholder="e-mail" type="e-mail" class="login"></ion-input>
+    <ion-input [(ngModel)]="password" placeholder="Password" type="password" class="login"></ion-input>
+  </div>
+
+<div id="container3">
+  <ion-button style="width: 265px;" color="dark" [disabled]="!email || !password" [routerLink]="[ '/arayuz']">Giriş</ion-button>
+  <ion-button style="width: 265px;" color="light" [routerLink]="[ '/home']">Kayıt Ol</ion-button><br><br><br>
+  <ion-label (click)="unuttum" class="sifremiUnuttum" [routerLink]="[ '/unuttum']">Şifremi Unuttum?</ion-label>
+</div>
+
+
+</ion-content>
